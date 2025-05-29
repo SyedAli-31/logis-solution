@@ -29,12 +29,12 @@ const ServiceCard = ({
   };
 
   return (
-    <motion.div variants={variants}>
+    <motion.div variants={variants} className="w-full sm:w-[90%] md:w-[380px]">
       <Card
         onClick={handleCardClick}
-        className="bg-white shadow-[0_4px_10px_rgba(0,0,0,0.05),_0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.1),_0_10px_40px_rgba(0,0,0,0.15)]  backdrop-blur-sm border border-green-600 hover:border-[#ff6630] transition-all duration-300 overflow-hidden group cursor-pointer w-[380px]"
+        className="bg-white shadow-[0_4px_10px_rgba(0,0,0,0.05),_0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.1),_0_10px_40px_rgba(0,0,0,0.15)] backdrop-blur-sm border border-green-600 hover:border-[#ff6630] transition-all duration-300 overflow-hidden group cursor-pointer h-full"
       >
-        <div className="p-6 h-[400px] w-[350px] flex flex-col ">
+        <div className="p-6 flex flex-col h-full">
           <div
             className={`w-14 h-14 rounded-lg mb-4 flex items-center justify-center ${gradientColor} text-white transform transition-transform group-hover:scale-110`}
           >
@@ -45,9 +45,11 @@ const ServiceCard = ({
             {title}
           </h3>
 
-          <p className="text-gray-800 mb-6 flex-grow text-[16px]">{description}</p>
+          <p className="text-gray-800 mb-6 flex-grow text-[16px]">
+            {description}
+          </p>
 
-          <div className="inline-flex items-center font-black  hover:from-blue-300 hover:to-blue-700  text-[#0d0b32]  transition-colors mt-auto">
+          <div className="inline-flex items-center font-black text-[#0d0b32] transition-colors mt-auto">
             Learn More
             <svg
               className="ml-2 -mr-1 w-4 h-4"
